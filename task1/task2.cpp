@@ -4,7 +4,6 @@ public:
     map<char, int> kv;  
     for (auto i : s) {
         kv[i] = kv[i] + 1;  
-        cout << i;
     }
      for (char i : s) {
         if (kv[i] == 1)
