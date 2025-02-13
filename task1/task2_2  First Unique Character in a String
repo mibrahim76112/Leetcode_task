@@ -1,0 +1,16 @@
+class Solution {
+public:
+    int firstUniqChar(string s) {
+    vector<int> kv(26,0);  
+    for (auto i : s) {
+       kv[i-'a']++;  
+    }
+     for (char i : s) {
+        if (kv[i-'a'] == 1)
+        {
+            return s.find(i);
+        }
+    }
+    return -1;
+    }
+};
